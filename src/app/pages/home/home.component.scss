@@ -178,7 +178,7 @@
 
               img {
                 height: 1rem;
-                margin-right: 0.3rem;
+                margin-right: 0.5rem;
               }
 
               span {
@@ -216,15 +216,17 @@
 }
 
 
-@media(max-width: 699px) {
+@media(max-width: 499px) {
 
   .section-weather-card {
+    padding-bottom: 10px;
+
     .card {
       height: 85vh;
       width: 85vw;
       max-height: 530px;
       max-width: initial;
-      max-height: initial;
+      max-height: 600px;
       justify-content: flex-start;
 
       .img-back {
