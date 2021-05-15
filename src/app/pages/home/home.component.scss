@@ -1,44 +1,73 @@
 .loader {
   color: #73d8b6;
-  padding-top: 20%;
+  position: relative;
+  height: 70vh;
 
-  img {
-    width: 200px;
-    margin: 0 auto;
-    display: block;
+  .miku-sun{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 230px;
+    height: 230px;
+    
+    img{
+      width: 100%;
+      animation: giroSol 4s infinite linear;
+    }
   }
 
-  .text {
-    margin: 0 auto;
-    width: max-content;
-    margin-top: 1.5rem;
-    display: flex;
-
-    span {
-      display: block;
-      margin-right: 1px;
-      font-size: 1.6rem;
-      font-weight: 500;
+  @keyframes giroSol{
+    0%{
+      transform: rotate(0deg);
       opacity: 0;
-      animation: fadeInText .3s cubic-bezier(0.29, 0.37, 0, 0.99) forwards;
-
-      @for $i from 1 through 11 {
-        &:nth-child(#{$i}n) {
-          animation-delay: #{$i * 0.1}s;
-        }
-      }
     }
+    10%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 1;
+    }
+    60%{
+      opacity: 0;
+    }
+    100%{
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+  }
 
-    @keyframes fadeInText {
-      0% {
-        transform: translateY(2rem);
-        opacity: 0;
-      }
+  .miku-box{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: ojosMiku 2s infinite step-end;
+  }
 
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
+  @keyframes ojosMiku {
+    0%{
+      background-image: url("/assets/img/loader_1.png");
+    }
+    20%{
+      background-image: url("/assets/img/loader_2.png");
+    }
+    30%{
+      background-image: url("/assets/img/loader_1.png");
+    }
+    50%{
+      background-image: url("/assets/img/loader_2.png");
+    }
+    60%{
+      background-image: url("/assets/img/loader_1.png");
+    }
+    100%{
+      background-image: url("/assets/img/loader_1.png");
     }
   }
 }
@@ -71,7 +100,7 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
-        object-position: right;
+        object-position: right top;
       }
     }
 

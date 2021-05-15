@@ -79,9 +79,9 @@ export class HomeComponent implements OnInit {
   }
 
   public setMessage_0() {
-    if (this.hour >= 7 && this.hour <= 11) {
+    if (this.hour >= 7 && this.hour <= 12) {
       this.messagesArray[0] = '¡ Buen día !';
-    } if (this.hour >= 12 && this.hour <= 18) {
+    } if (this.hour >= 13 && this.hour <= 18) {
       this.messagesArray[0] = '¡ Buenas tardes !';
     } else {
       this.messagesArray[0] = '¡ Buenas noches !';
@@ -89,9 +89,9 @@ export class HomeComponent implements OnInit {
   }
 
   public setMessage_1() {
-    if (this.temp < 11) {
+    if (this.temp < 12) {
       this.messagesArray[1] = 'Hoy es un día frío';
-    } if (this.temp > 10 && this.temp < 18) {
+    } if (this.temp > 11 && this.temp < 18) {
       this.messagesArray[1] = 'Hoy es un día fresco';
     } if (this.temp > 17 && this.temp < 26) {
       this.messagesArray[1] = 'Hoy es un día templado';

@@ -1,23 +1,13 @@
-<div class="loader" *ngIf="!weather">
-  <img class="fade-in" src="assets/img/loader.png" alt="">
-  <div class="text">
-    <span>C</span>
-    <span>a</span>
-    <span>r</span>
-    <span>g</span>
-    <span>a</span>
-    <span>n</span>
-    <span>d</span>
-    <span>o</span>
-    <span>.</span>
-    <span>.</span>
-    <span>.</span>
+<div class="loader fade-in" *ngIf="!weather">
+  <div class="miku-sun">
+    <img src="assets/img/sol_loader.png" alt="">
   </div>
+  <div class="miku-box"></div>
 </div>
 <section class="section-weather-card" *ngIf="weather">
   <div class="card fade-in">
     <div class="img-back">
-      <img class="dynamic-background" src="assets/img/fondos/{{icon}}.png" alt="">
+      <img class="dynamic-background" src="assets/img/fondos/{{icon}}.jpg" alt="">
     </div>
     <img class="form shadow" src="assets/img/forma.svg" alt="">
     <img class="form" src="assets/img/forma.svg" alt="">
