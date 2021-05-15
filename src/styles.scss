@@ -1,31 +1,59 @@
-body{
-    font-family: sans-serif;
-    font-family: 'Roboto', sans-serif;
-    color: #656f81;
-    margin: 0;
+body {
+  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #656f81;
+  margin: 0;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-img{
-    user-select: none;
-    -webkit-user-drag: none;
+img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-.fade-in{
-    animation: fadeIn 1s cubic-bezier(0.29, 0.37, 0, 0.99) forwards;
+.fade-in {
+  animation: fadeIn 1s cubic-bezier(0.29, 0.37, 0, 0.99) forwards;
+  opacity: 0;
+}
+
+.fade-in-messages {
+  opacity: 0;
+  animation: fadeInMessages 5s cubic-bezier(0.29, 0.37, 0, 0.99) forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(1rem);
     opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-@keyframes fadeIn{
-    0%{
-        transform: translateY(1rem);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
+@keyframes fadeInMessages {
+  0% {
+    transform: translateX(3rem);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-3rem);
+    opacity: 0;
+  }
 }

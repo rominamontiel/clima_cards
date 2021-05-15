@@ -47,6 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
   width: 100%;
   padding-bottom: 20%;
@@ -102,6 +103,7 @@
         display: block;
         font-size: 11px;
         opacity: .5;
+        white-space: nowrap;
       }
 
       .main-content {
@@ -133,7 +135,9 @@
               font-weight: 300;
               letter-spacing: -3px;
               width: 50%;
+              white-space: nowrap;
               line-height: 1;
+              animation-delay: 0.1s;
             }
 
             .right {
@@ -146,9 +150,10 @@
               padding: 0.4rem 0px;
 
               img {
-                height: 3rem;
+                height: 3.2rem;
                 display: block;
                 margin: 0 auto;
+                animation-delay: 0.3s;
               }
 
               .descr {
@@ -158,6 +163,8 @@
                 margin: 0 auto;
                 display: block;
                 text-transform: capitalize;
+                white-space: nowrap;
+                animation-delay: 0.5s;
               }
             }
           }
@@ -168,6 +175,7 @@
             flex-wrap: wrap;
             width: 80%;
             margin: 0 auto;
+            animation-delay: 0.6s;              
 
             .box {
               width: 40%;
@@ -189,6 +197,16 @@
           }
         }
       }
+    }
+  }
+
+  .dynamic-text{
+    margin-top: 3.5rem;
+
+    p{
+      font-weight: 300;
+      margin-top: 0;
+      font-size: 1.1rem;
     }
   }
 
@@ -220,14 +238,15 @@
 
   .section-weather-card {
     padding-bottom: 10px;
+    padding-top: 2rem;
 
     .card {
-      height: 85vh;
+      height: 75vh;
       width: 85vw;
-      max-height: 530px;
       max-width: initial;
       max-height: 600px;
       justify-content: flex-start;
+      min-height: 490px;
 
       .img-back {
         height: 64%;
@@ -245,6 +264,7 @@
           display: block;
           top: initial;
           bottom: -7%;
+          min-width: 320px;
         }
       }
 
@@ -254,7 +274,16 @@
         top: initial;
         bottom: 0;
         max-height: 300px;
+
+        .date{
+          text-align: center;
+        }
       }
+    }
+
+    .dynamic-text{
+      margin-top: 2rem;
+      max-width: 85vw;
     }
   }
 }

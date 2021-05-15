@@ -28,22 +28,22 @@
       <div class="main-content">
         <div class="centered">
           <div class="large-content">
-            <div class="left">
+            <div class="left fade-in">
               {{temp}}°
             </div>
             <div class="right">
-              <img src="assets/img/icons/{{icon}}.svg" alt="">
-              <span class="descr">{{descr}}</span>
+              <img class="fade-in" src="assets/img/icons/{{icon}}.svg" alt="">
+              <span class="descr fade-in">{{descr}}</span>
             </div>
           </div>
-          <div class="icons-content">
+          <div class="icons-content fade-in">
             <div class="box">
               <img src="assets/img/hum.svg" alt="">
               <span>{{hum}}%</span>
             </div>
             <div class="box">
               <img src="assets/img/viento.svg" alt="">
-              <span>{{wind}}km</span>
+              <span>{{wind}} km</span>
             </div>
             <div class="box">
               <img src="assets/img/termi.svg" alt="">
@@ -57,6 +57,26 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="dynamic-text">
+    <p class="fade-in-messages" *ngIf="messagesArrayPos === 0">
+      {{messagesArray[0]}}
+    </p>
+    <p class="fade-in-messages" *ngIf="messagesArrayPos === 1">
+      {{messagesArray[1]}}
+    </p>
+    <p class="fade-in-messages" *ngIf="messagesArrayPos === 2">
+      {{messagesArray[2]}}
+    </p>
+    <p class="fade-in-messages" *ngIf="messagesArrayPos === 3">
+      {{messagesArray[3]}}
+    </p>
+    <p class="fade-in-messages" *ngIf="messagesArrayPos === 4">
+      {{messagesArray[4]}}
+    </p>
+    <p class="fade-in-messages" *ngIf="messagesArrayPos === 5">
+      {{messagesArray[5]}}
+    </p>
   </div>
   <div class="line-temp">
     <span [ngStyle]="{left: tempPercentage}"></span>
