@@ -25,19 +25,19 @@
     10%{
       opacity: 1;
     }
-    50%{
+    85%{
       opacity: 1;
     }
-    60%{
+    90%{
       opacity: 0;
     }
     100%{
-      transform: rotate(360deg);
+      transform: rotate(250deg);
       opacity: 0;
     }
   }
 
-  .miku-box{
+  .miku-box, .miku-base{
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -48,8 +48,15 @@
     top: 50%;
     transform: translate(-50%,-50%);
     animation: ojosMiku 2s infinite step-end;
+    display: flex;
+    align-items: center;
   }
 
+  .miku-base{
+    height: auto;
+    animation: toHide 1s forwards;
+  }
+  
   @keyframes ojosMiku {
     0%{
       background-image: url("/assets/img/loader_1.png");
@@ -68,6 +75,15 @@
     }
     100%{
       background-image: url("/assets/img/loader_1.png");
+    }
+  }
+
+  @keyframes toHide {
+    90%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
     }
   }
 }
