@@ -79,12 +79,11 @@ export class HomeComponent implements OnInit {
   }
 
   public setMessage_0() {
-    if (this.hour >= 7 && this.hour <= 12) {
+    this.messagesArray[0] = '¡ Buenas noches !';
+    if (this.hour >= 6 && this.hour <= 12) {
       this.messagesArray[0] = '¡ Buen día !';
     } if (this.hour >= 13 && this.hour <= 18) {
       this.messagesArray[0] = '¡ Buenas tardes !';
-    } else {
-      this.messagesArray[0] = '¡ Buenas noches !';
     }
   }
 
